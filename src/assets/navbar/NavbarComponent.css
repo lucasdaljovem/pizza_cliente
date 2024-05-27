@@ -1,0 +1,23 @@
+.navbar-brand-custom {
+    background-color: #F0B872;
+    border-radius: 20px;
+    color: black !important;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-family: 'Gotham', sans-serif;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .nav-item a {
+    color: black !important;
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    font-family: 'Gotham', sans-serif; /* Aplica a fonte Gotham */
+  }
