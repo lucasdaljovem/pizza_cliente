@@ -1,19 +1,23 @@
-//imports here
 import React from 'react';
-
 import NavbarComponent from './assets/navbar/NavbarComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import BannerComponent from './assets/banner/BannerComponent';
+import FooterComponent from './assets/footer/FooterComponent';
+
 
 function App() {
   return (
     <div className="App">
-      <div>
+      <header>
         <NavbarComponent />
-        <div className="container mt-5">
-          <h1>Conteúdo da Página</h1>
-          {/* Resto do conteúdo da página */}
-        </div> {/* Esta div estava faltando a tag de fechamento */}
+      </header>
+
+      <div className="container-fluid mt-5" style={{ paddingLeft: '0', paddingRight: '0', marginTop: '0px' }}>
+        <BannerComponent />
+        {/* Resto do conteúdo da página */}
       </div>
+
+      <FooterComponent />
     </div>
   );
 }

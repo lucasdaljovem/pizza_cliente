@@ -1,0 +1,15 @@
+
+.degrade {
+    background-image: linear-gradient(to right, #FF3131, #FF914D);
+  }
+  
+  .banner-content {
+    font-family: 'Gotham', sans-serif;
+    color: #F8F0E2;
+
+  }
+  
+  .banner-content h1 {
+    font-weight: bold;
+  }
+  

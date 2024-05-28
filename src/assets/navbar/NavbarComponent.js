@@ -3,36 +3,38 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavbarComponent.css'; // Importe o CSS personalizado
-
+<svg> </svg>
 const NavbarComponent = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand navbar-brand-custom" href="#">Sapore di pizza</a>
+        <a className="navbar-brand navbar-brand-custom navbar-brand-custom-circle" href="#">Sapore di pizza</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">Sobre nós</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Cardápio</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Endereço</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Contato</a>
-            </li>
-            <li className="nav-item">
-            <a className="nav-link" href="#">
-              <i className="bi bi-basket2 bi-lg"></i>
-              Carrinho
-            </a>
-          </li>
-          </ul>
+          <div className="d-flex w-100 justify-content-between">
+            <ul className="navbar-nav me-auto">
+              <li className="nav-item">
+                <a className="nav-link active" aria-current="page" href="#">Sobre nós</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Cardápio</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Endereço</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">Contato</a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  <i className="bi bi-basket2" style={{ fontSize: '20px' }}></i>
+                  Carrinho
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
