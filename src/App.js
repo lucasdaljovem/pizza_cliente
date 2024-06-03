@@ -3,7 +3,7 @@ import NavbarComponent from './assets/navbar/NavbarComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BannerComponent from './assets/banner/BannerComponent';
 import FooterComponent from './assets/footer/FooterComponent';
-
+import './App.css';
 
 function App() {
   return (
@@ -11,12 +11,10 @@ function App() {
       <header>
         <NavbarComponent />
       </header>
-
-      <div className="container-fluid mt-5" style={{ paddingLeft: '0', paddingRight: '0', marginTop: '0px' }}>
+      <div className="container-fluid mt-5">
         <BannerComponent />
         {/* Resto do conteúdo da página */}
       </div>
-
       <FooterComponent />
     </div>
   );

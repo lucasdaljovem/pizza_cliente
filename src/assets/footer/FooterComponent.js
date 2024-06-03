@@ -9,7 +9,7 @@ const FooterComponent = () => {
       {/* <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
         {/* Left */}
         {/* <div className="me-5 d-none d-lg-block">
-          <span>Get connected with us on social networks:</span>
+          <span>Siga-nos nas Redes Sociais. Fique por dentro das nossas novidades,<br /> promoções e eventos especiais</span>
         </div> */}
         {/* Left */}
 
@@ -35,7 +35,7 @@ const FooterComponent = () => {
             <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
               {/* Content */}
               <h6 className="text-uppercase fw-bold mb-4">
-                <i className="fas fa-gem me-3"></i>Company name
+                <i className="fas fa-gem me-3"></i>Sapore Di Pizza
               </h6>
               <p>
                 Here you can use rows and columns to organize your footer content. Lorem ipsum
@@ -89,11 +89,11 @@ const FooterComponent = () => {
             {/* Grid column */}
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               {/* Links */}
-              <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-              <p><i className="fas fa-home me-3"></i> New York, NY 10012, US</p>
+              <h6 className="text-uppercase fw-bold mb-4">Contato</h6>
+              <p><i className="fas fa-home me-3"></i>Avenida San Giovanni, 2345, Florianópolis-SC, 88040-222</p>
               <p>
                 <i className="fas fa-envelope me-3"></i>
-                info@example.com
+                contato@saporedipizza.com.br
               </p>
               <p><i className="fas fa-phone me-3"></i> + 01 234 567 88</p>
               <p><i className="fas fa-print me-3"></i> + 01 234 567 89</p>
@@ -107,7 +107,7 @@ const FooterComponent = () => {
 
       {/* Copyright */}
       <div className="text-center p-4" style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        © 2021 Copyright:
+        © 2024 Copyright:
         <a className="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
       </div>
       {/* Copyright */}
