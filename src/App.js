@@ -15,7 +15,7 @@ function App() {
         <BannerComponent />
         {/* Resto do conteúdo da página */}
       </div>
-      <FooterComponent />
+      {/* <FooterComponent /> */}
     </div>
   );
 }
