@@ -28,7 +28,7 @@ const NavbarComponent = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  <i className="bi bi-basket2" style={{ fontSize: '20px' }}></i>
+                  <i className="bi bi-cart-plus" style={{ fontSize: '20px' }}></i>
                   Carrinho
                 </a>
               </li>

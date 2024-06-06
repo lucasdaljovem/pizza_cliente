@@ -30,7 +30,7 @@
 .navbar-background {
   /* background-color: #FEFAE0;
   opacity: 0.2; */
-  background-image: linear-gradient(to right, #FE5C56, #FEA56B);
+  background-color: #C1000F !important; /* Alterado para #C1000F */
 }
 
 .nav-item {
