@@ -1,16 +1,18 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './NavbarComponent.css'; // Importe o CSS personalizado
+import logoSaporeDiPizza from './logoSaporeDiPizza.png'; // Importe o logotipo
 
 const NavbarComponent = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-background">
-      <div className="container-fluid ">
-        <a className="navbar-brand logo" href="#">Sapore di pizza</a>
+    <nav className="navbar navbar-expand-lg fixed-top navbar-background">
+      <div className="container-fluid">
+        <a className="navbar-brand logo" href="#">
+          <img src={logoSaporeDiPizza} alt="Sapore di pizza" className="logo-image" />
+        </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        
         <div className="collapse navbar-collapse" id="navbarNav">
           <div className="d-flex w-100 justify-content-between">
             <ul className="navbar-nav me-auto">

@@ -16,7 +16,7 @@
 
 .btn-custom {
   background-color: #F0B872 !important;
-  border-radius: 20px;
+  border-radius: 20px !important;
   border: none;
 }
 
