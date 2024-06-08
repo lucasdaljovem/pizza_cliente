@@ -1,10 +1,41 @@
-.logo {
-  background-color: #F0B872;
-  border-radius: 20px;
-  color: black !important;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-  font-family: 'Gotham', sans-serif;
+/* Estilos básicos */
+.logo-image {
+  width: auto;
+}
+
+/* Estilos para tamanhos de tela diferentes */
+
+/* Mobile (less than 576px) */
+@media (max-width: 575.98px) {
+  .logo-image {
+    max-height: 40px; /* Ajuste conforme necessário */
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem; /* Tamanho da fonte para dispositivos móveis */
+  }
+}
+
+/* Tablet (between 576px and 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .logo-image {
+    max-height: 40px; /* Ajuste conforme necessário */
+  }
+
+  .navbar-brand {
+    font-size: 1.25rem; /* Tamanho da fonte para tablets */
+  }
+}
+
+/* Desktop (768px and above) */
+@media (min-width: 768px) {
+  .logo-image {
+    max-height: 65px; /* Ajuste conforme necessário */
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem; /* Tamanho da fonte para desktops */
+  }
 }
 
 .navbar-nav {
@@ -28,9 +59,7 @@
 }
 
 .navbar-background {
-  /* background-color: #FEFAE0;
-  opacity: 0.2; */
-  background-image: linear-gradient(to right, #FE5C56, #FEA56B);
+  background-color: #C1000F !important; /* Alterado para #C1000F */
 }
 
 .nav-item {
@@ -46,18 +75,18 @@
 }
 
 .nav-item a i {
-  margin-right: 0.5rem; /* Espaçamento entre o ícone e o texto */
+  margin-right: 0.2rem; /* Espaçamento entre o ícone e o texto */
   font-size: 1rem; /* Define o tamanho do ícone */
 }
 
 @media (max-width: 992px) {
   .navbar-nav {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .nav-item {
-      width: 100%;
-      text-align: left;
+    width: 100%;
+    text-align: left;
   }
 }

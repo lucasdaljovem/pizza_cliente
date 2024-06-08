@@ -1,0 +1,34 @@
+.product-card {
+  background-color: #F0B872  !important;
+}
+
+.product-card .card-title {
+  color: #000;
+  font-weight: bold;
+}
+
+.product-card .card-text {
+  color: #000;
+}
+
+.add-to-cart-button {
+  background-color: #C1000F!important;
+  border: none;
+  color: #fff !important;
+}
+
+.add-to-cart-button:hover {
+  background-color: #A3000C !important;
+}
+
+.description-price-container {
+  padding: 10px;
+}
+
+.description {
+  margin-bottom: 5px;
+}
+
+.price {
+  margin-bottom: 0;
+}
