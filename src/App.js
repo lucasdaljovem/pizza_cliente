@@ -3,26 +3,10 @@ import NavbarComponent from './assets/navbar/NavbarComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BannerComponent from './assets/banner/BannerComponent';
 import FooterComponent from './assets/footer/FooterComponent';
-import ProductCard from './assets/produtos/ProductCard.js';
-import pizzaPeperoniImage from './pizzaPeperoniImage.png'
+import ProductCard from './assets/produtos/ProductCard';
+import products from './assets/produtos/produtos'; // Importe os produtos do novo arquivo
 
 import './App.css';
-
-const products = [
-  {
-    product: "Pizza Peperoni",
-    description: "Fatias generosas de pepperoni picante sobre uma camada de queijo mussarela derretido e molho de tomate.",
-    image: pizzaPeperoniImage,
-    price: "R$43,90"
-  },
-  {
-    product: "Pizza Portuguesa",
-    description: "Uma combinação saborosa de presunto, ovos cozidos, cebola, pimentão, azeitonas e queijo mussarela.",
-    image: pizzaPeperoniImage, // Adicione a imagem correta
-    price: "R$40,90"
-  },
-  // Adicione mais produtos aqui
-];
 
 function App() {
   return (

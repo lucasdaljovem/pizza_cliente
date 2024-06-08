@@ -18,7 +18,7 @@ const ProductCard = ({ product, description, image, price }) => {
                 <p className="card-text description">{description}</p>
                 <p className="card-text price"><strong>{price}</strong></p>
               </div>
-              <button className="btn btn-primary add-to-cart-button">ADICIONAR AO CARRINHO</button>
+              <button className="btn btn-primary add-to-cart-button font-weight-bold rounded-pill">ADICIONAR AO CARRINHO <i className="bi bi-cart-plus" style={{ fontSize: '20px' }}></i></button>
             </div>
           </div>
         </div>
