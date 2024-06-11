@@ -14,7 +14,7 @@ const ProductCard = ({ product, description, image, price }) => {
             <div className="card-body">
               <h5 className="card-title">{product}</h5>
               {/* Novo container para description e price com fundo na cor #EA9453 e opacidade 70% */}
-              <div className="description-price-container" style={{ backgroundColor: 'rgba(234, 148, 83, 0.7)' }}> {/* Cor com opacidade */}
+              <div className="description-price-container" style={{ backgroundColor: '#EA9453' }}> {/* Cor com opacidade */}
                 <p className="card-text description">{description}</p>
                 <p className="card-text price"><strong>{price}</strong></p>
               </div>
