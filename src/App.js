@@ -11,12 +11,13 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-       {/* Para reaproveitar elementos */}
       <header>
         <NavbarComponent />
       </header>
-      {/* <FooterComponent /> */}
+      <div className='container-fluid mt-5'>
+       {/* Para reaproveitar elementos */}
       <Outlet/>
+      </div>
     </div>
   );
 }
