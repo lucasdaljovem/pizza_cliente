@@ -3,7 +3,7 @@
     min-height: 100vh; /* Garante que o fundo cubra toda a altura da janela */
     display: flex;
     flex-direction: column;
-    padding-top: 40px; /*afasta o navbar dos outros objetos*/
+    padding-top: 40px;
   }
   
   /* Ajusta a posição do conteúdo da página */
