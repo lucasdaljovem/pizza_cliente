@@ -102,4 +102,31 @@
     display: flex;
     align-items: center;
   }
-  
+
+/* Estilos para os botões no rodapé do modal */
+.button-secondary,
+.button-primary {
+  border-radius: 20px;
+  width: 45%; /* Largura igual para os botões */
+  font-size: 1rem; /* Tamanho de fonte ajustado */
+  transition: all 0.3s ease; /* Transição suave para mudanças */
+}
+
+.button-secondary {
+  background: linear-gradient(to right, #FF3131, #FF914D);
+  border: none;
+  margin-right: 10px; /* Espaçamento entre os botões */
+}
+
+.button-primary {
+  background: linear-gradient(to right, #FF3131, #FF914D);
+  border: none;
+  margin-left: 10px; /* Espaçamento entre os botões */
+}
+
+/* Estilos de hover */
+.button-secondary:hover,
+.button-primary:hover {
+  transform: translateY(-2px); /* Efeito de levantar o botão ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o botão */
+}

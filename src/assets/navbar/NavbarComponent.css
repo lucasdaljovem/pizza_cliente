@@ -90,3 +90,17 @@
     text-align: left;
   }
 }
+
+/* Estilos para os botões no navbar */
+.navbar-nav .nav-link {
+  font-family: 'Gotham', sans-serif; /* Aplica a fonte Gotham */
+  transition: all 0.3s ease; /* Transição suave para mudanças */
+}
+
+.navbar-nav .nav-link:hover {
+  color: white !important; /* Altera a cor do texto ao passar o mouse */
+}
+
+.navbar-nav .nav-link:hover i {
+  color: white; /* Altera a cor do ícone ao passar o mouse */
+}

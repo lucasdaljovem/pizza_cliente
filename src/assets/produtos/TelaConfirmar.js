@@ -3,9 +3,9 @@ import './TelaConfirmar.css';
 import products from './produtos';
 
 const TelaConfirmar = ({ show, handleClose, product }) => {
-  const [size, setSize] = useState('Médio');
-  const [quantity, setQuantity] = useState(1);
-  const [observations, setObservations] = useState('');
+  const [size, setSize] = useState('Médio');//define o tamanho inicial para médio
+  const [quantity, setQuantity] = useState(1); //define a quantidade inicial para 1
+  const [observations, setObservations] = useState(''); //defini as observaçõs como
 
   useEffect(() => {
     if (product && product.category) {
@@ -33,7 +33,7 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
             </button>
           </div>
           <div className="modal-body">
-            {isPizza && (
+{isPizza && (
               <div className="form-group">
                 <label>Tamanho</label>
                 {['Grande', 'Médio', 'Pequeno'].map((sizeOption) => (
@@ -46,9 +46,9 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
                       checked={size === sizeOption}
                       onChange={handleSizeChange}
                     />
-                    <label className="form-check-label">
+                    <la            bel className="form-check-label">
                       {`${sizeOption} R$${product.prices[sizeOption].toFixed(2)}`}
-                    </label>
+                    </la>
                   </div>
                 ))}
               </div>
