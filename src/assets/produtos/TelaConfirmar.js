@@ -3,13 +3,13 @@ import './TelaConfirmar.css';
 import products from './produtos';
 
 const TelaConfirmar = ({ show, handleClose, product }) => {
-  const [size, setSize] = useState('Médio');//define o tamanho inicial para médio
-  const [quantity, setQuantity] = useState(1); //define a quantidade inicial para 1
-  const [observations, setObservations] = useState(''); //defini as observaçõs como
+  const [size, setSize] = useState('Médio');
+  const [quantity, setQuantity] = useState(1);
+  const [observations, setObservations] = useState('');
 
   useEffect(() => {
     if (product && product.category) {
-      setSize('Médio'); // Defina o tamanho padrão como 'Médio' quando o produto for definido
+      setSize('Médio');
     }
   }, [product]);
 
@@ -33,7 +33,7 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
             </button>
           </div>
           <div className="modal-body">
-{isPizza && (
+            {isPizza && (
               <div className="form-group">
                 <label>Tamanho</label>
                 {['Grande', 'Médio', 'Pequeno'].map((sizeOption) => (
@@ -46,9 +46,9 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
                       checked={size === sizeOption}
                       onChange={handleSizeChange}
                     />
-                    <la            bel className="form-check-label">
+                    <label className="form-check-label">
                       {`${sizeOption} R$${product.prices[sizeOption].toFixed(2)}`}
-                    </la>
+                    </label>
                   </div>
                 ))}
               </div>
@@ -56,7 +56,7 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
             <div className="form-group">
               <label className="mb-0">Observações:</label>
               <div className="d-flex align-items-center">
-                <div className="input-group">
+                <div className="input-group input-group-observations">
                   <div className="input-group-prepend">
                     <span className="input-group-text">
                       <i className="bi bi-pencil-square"></i>

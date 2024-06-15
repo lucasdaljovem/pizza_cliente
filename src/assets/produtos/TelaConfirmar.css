@@ -1,132 +1,144 @@
 /* Estilos para o container pai do modal */
 .modal-content {
     background-color: #4C6B33;
-    border: none; /* Remove qualquer borda que possa estar sendo aplicada */
-    box-shadow: none; /* Remove qualquer sombra que possa estar sendo aplicada */
-  }
-  
-  /* Estilos para o cabeçalho */
-  .modal-header {
+    border: none;
+    box-shadow: none;
+    border-radius: 10px; /* Adiciona um arredondamento aos cantos */
+}
+
+/* Estilos para o cabeçalho */
+.modal-header {
     background-color: #4C6B33;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: none; /* Remove a borda inferior que separa o header do body */
-    padding: 15px; /* Ajusta o espaçamento interno para o header */
-  }
-  
-  .modal-title {
+    border-bottom: none;
+    padding: 15px;
+}
+
+.modal-title {
     color: white;
-    font-size: 1.2rem; /* Tamanho de fonte ajustado */
-  }
-  
-  .close-button {
+    font-size: 1.2rem;
+}
+
+.close-button {
     color: #DC1D25;
     background: none;
     border: none;
-    font-size: 1.8rem; /* Tamanho de fonte ajustado */
-  }
-  
-  /* Estilos para o corpo do modal */
-  .modal-body {
+    font-size: 1.8rem;
+}
+
+/* Estilos para o corpo do modal */
+.modal-body {
     background-color: #4C6B33;
     color: white;
-    padding: 20px; /* Ajusta o espaçamento interno para o body */
-  }
-  
-  .form-check-label {
+    padding: 20px;
+}
+
+.form-check-label {
     color: white;
-  }
-  
-  /* Estilos para inputs e formulários */
-  .form-control-observations {
+}
+
+/* Estilos para inputs e formulários */
+.form-control-observations {
     border-radius: 20px;
     background-color: white;
     color: black;
-    width: 100%; /* Ocupa toda a largura disponível */
-    padding: 10px; /* Espaçamento interno */
-  }
-  
-  .form-control-quantity {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-control-quantity {
     border-radius: 20px;
-    width: 60px; /* Largura fixa para o input de quantidade */
-  }
-  
-  /* Estilos para o rodapé do modal */
-  .modal-footer {
+    width: 60px;
+}
+
+/* Estilos para o rodapé do modal */
+.modal-footer {
     background-color: #4C6B33;
     display: flex;
     justify-content: space-between;
-    border-top: none; /* Remove a borda superior que separa o footer do body */
-    padding: 15px; /* Ajusta o espaçamento interno para o footer */
-  }
-  
-  .button-secondary,
-  .button-primary {
-    border-radius: 20px;
-    width: 45%; /* Largura igual para os botões */
-    font-size: 1rem; /* Tamanho de fonte ajustado */
-  }
-  
-  .button-secondary {
-    background: linear-gradient(to right, #FF3131, #FF914D);
-    border: none;
-    margin-right: 10px; /* Espaçamento entre os botões */
-  }
-  
-  .button-primary {
-    background: linear-gradient(to right, #FF3131, #FF914D);
-    border: none;
-    margin-left: 10px; /* Espaçamento entre os botões */
-  }
-  
-  .button-secondary:focus,
-  .button-primary:focus {
-    box-shadow: none;
-  }
-  
-  /* Estilos para o ícone de lápis */
-  .input-group-prepend .input-group-text {
-    background-color: transparent;
-    border: none;
-    font-size: 1.5rem;
-  }
-  
-  .input-group-prepend .bi-pencil-square {
-    color: white;
-    font-size: 2rem;
-  }
-  
-  /* Alinhamento vertical dos itens dentro do input group de observações */
-  .input-group-observations {
-    display: flex;
-    align-items: center;
-  }
+    border-top: none;
+    padding: 15px;
+}
 
-/* Estilos para os botões no rodapé do modal */
 .button-secondary,
 .button-primary {
-  border-radius: 20px;
-  width: 45%; /* Largura igual para os botões */
-  font-size: 1rem; /* Tamanho de fonte ajustado */
-  transition: all 0.3s ease; /* Transição suave para mudanças */
+    border-radius: 20px;
+    width: 45%;
+    font-size: 1rem;
 }
 
 .button-secondary {
-  background: linear-gradient(to right, #FF3131, #FF914D);
-  border: none;
-  margin-right: 10px; /* Espaçamento entre os botões */
+    background: linear-gradient(to right, #FF3131, #FF914D);
+    border: none;
+    margin-right: 10px;
 }
 
 .button-primary {
-  background: linear-gradient(to right, #FF3131, #FF914D);
-  border: none;
-  margin-left: 10px; /* Espaçamento entre os botões */
+    background: linear-gradient(to right, #FF3131, #FF914D);
+    border: none;
+    margin-left: 10px;
+}
+
+.button-secondary:focus,
+.button-primary:focus {
+    box-shadow: none;
+}
+
+/* Estilos para o ícone de lápis */
+.input-group-prepend .input-group-text {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.input-group-prepend .bi-pencil-square {
+    color: white;
+    font-size: 2rem;
+}
+
+.input-group-observations {
+    display: flex;
+    align-items: center;
 }
 
 /* Estilos de hover */
 .button-secondary:hover,
 .button-primary:hover {
-  transform: translateY(-2px); /* Efeito de levantar o botão ao passar o mouse */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar o botão */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de responsividade */
+@media (max-width: 576px) {
+    .modal-dialog {
+        margin: 10px;
+    }
+
+    .modal-content {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    .modal-header, .modal-body, .modal-footer {
+        padding: 10px;
+    }
+
+    .modal-title {
+        font-size: 1rem;
+    }
+
+    .close-button {
+        font-size: 1.5rem;
+    }
+
+    .form-control-observations, .form-control-quantity {
+        width: 100%;
+    }
+
+    .button-secondary, .button-primary {
+        width: 100%;
+        margin: 5px 0;
+    }
 }
