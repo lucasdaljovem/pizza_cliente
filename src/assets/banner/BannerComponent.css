@@ -24,34 +24,23 @@
   background-color: #d99b62 !important;
 }
 
-.background-coresfundo {
-  position: absolute;
-  top: 20%;
-  right: -12vw;
-  bottom: 0;
-  width: 50%;
-  height: 100%;
-  background: url('../../assets/banner/coresFundo.svg') no-repeat;
-  background-size: cover;
-  z-index: 0; /* Assegura que o SVG está abaixo das outras imagens */
-}
-
 .happy-pizza {
   max-width: 10%;
   height: auto;
 }
 
-.pizza-banner {
-  max-width: 30vw;
-  height: auto;
-  z-index: 1;
+.banner-background {
+  width: 100%;
+
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Mobile (less than 576px) */
 @media (max-width: 575.98px) {
-  .background-coresfundo {
-    display: none; /* Esconder a imagem de fundo em telas pequenas */
-  }
+  /* background-image: url('../../assets/banner/pizzaBannerCelular.png'); */
 
   .banner-content h1 img {
     max-width: 20%;
@@ -63,10 +52,6 @@
 
   .banner-content p {
     font-size: 0.875rem; /* Tamanho da fonte para parágrafos em telas menores */
-  }
-
-  .col-md-6 img {
-    max-width: 100%;
   }
 
   .col-md-6 {
@@ -85,9 +70,7 @@
 
 /* Tablet (between 576px and 767px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
-  .background-coresfundo {
-    display: none; /* Esconder a imagem de fundo em telas pequenas */
-  }
+  /* background-image: url('../../assets/banner/pizzaBannerTablet.png'); */
 
   .banner-content h1 img {
     max-width: 15%;
@@ -99,10 +82,6 @@
 
   .banner-content p {
     font-size: 1rem; /* Tamanho da fonte para parágrafos em telas de tablet */
-  }
-
-  .col-md-6 img {
-    max-width: 80%;
   }
 
   .col-md-6 {
@@ -121,6 +100,10 @@
 
 /* Desktop (768px and above) */
 @media (min-width: 768px) {
+  .banner-background {
+    background-image: url('../../assets/banner/pizzaBannerComputador.png');
+  }
+
   .banner-content {
     text-align: left; /* Alinhar o texto à esquerda em telas grandes */
   }
@@ -135,10 +118,6 @@
 
   .banner-content p {
     font-size: 1.3rem; /* Tamanho da fonte para parágrafos em telas grandes */
-  }
-
-  .col-md-6 img {
-    max-width: 30vw;
   }
 
   .btn-custom {

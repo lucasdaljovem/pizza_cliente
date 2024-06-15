@@ -1,0 +1,105 @@
+/* Estilos para o container pai do modal */
+.modal-content {
+    background-color: #4C6B33;
+    border: none; /* Remove qualquer borda que possa estar sendo aplicada */
+    box-shadow: none; /* Remove qualquer sombra que possa estar sendo aplicada */
+  }
+  
+  /* Estilos para o cabeçalho */
+  .modal-header {
+    background-color: #4C6B33;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none; /* Remove a borda inferior que separa o header do body */
+    padding: 15px; /* Ajusta o espaçamento interno para o header */
+  }
+  
+  .modal-title {
+    color: white;
+    font-size: 1.2rem; /* Tamanho de fonte ajustado */
+  }
+  
+  .close-button {
+    color: #DC1D25;
+    background: none;
+    border: none;
+    font-size: 1.8rem; /* Tamanho de fonte ajustado */
+  }
+  
+  /* Estilos para o corpo do modal */
+  .modal-body {
+    background-color: #4C6B33;
+    color: white;
+    padding: 20px; /* Ajusta o espaçamento interno para o body */
+  }
+  
+  .form-check-label {
+    color: white;
+  }
+  
+  /* Estilos para inputs e formulários */
+  .form-control-observations {
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    width: 100%; /* Ocupa toda a largura disponível */
+    padding: 10px; /* Espaçamento interno */
+  }
+  
+  .form-control-quantity {
+    border-radius: 20px;
+    width: 60px; /* Largura fixa para o input de quantidade */
+  }
+  
+  /* Estilos para o rodapé do modal */
+  .modal-footer {
+    background-color: #4C6B33;
+    display: flex;
+    justify-content: space-between;
+    border-top: none; /* Remove a borda superior que separa o footer do body */
+    padding: 15px; /* Ajusta o espaçamento interno para o footer */
+  }
+  
+  .button-secondary,
+  .button-primary {
+    border-radius: 20px;
+    width: 45%; /* Largura igual para os botões */
+    font-size: 1rem; /* Tamanho de fonte ajustado */
+  }
+  
+  .button-secondary {
+    background: linear-gradient(to right, #FF3131, #FF914D);
+    border: none;
+    margin-right: 10px; /* Espaçamento entre os botões */
+  }
+  
+  .button-primary {
+    background: linear-gradient(to right, #FF3131, #FF914D);
+    border: none;
+    margin-left: 10px; /* Espaçamento entre os botões */
+  }
+  
+  .button-secondary:focus,
+  .button-primary:focus {
+    box-shadow: none;
+  }
+  
+  /* Estilos para o ícone de lápis */
+  .input-group-prepend .input-group-text {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+  }
+  
+  .input-group-prepend .bi-pencil-square {
+    color: white;
+    font-size: 2rem;
+  }
+  
+  /* Alinhamento vertical dos itens dentro do input group de observações */
+  .input-group-observations {
+    display: flex;
+    align-items: center;
+  }
+  

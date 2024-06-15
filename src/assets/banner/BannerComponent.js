@@ -1,12 +1,11 @@
 import React from 'react';
 import './BannerComponent.css';
-import pizzaBanner from '../../assets/banner/pizzaBanner.png'; // Certifique-se de que o caminho está correto
-import happyPizza from '../../assets/banner/happyPizza.png'; // Certifique-se de que o caminho está correto
+import happyPizza from '../../assets/banner/happyPizza.ico'; // Certifique-se de que o caminho está correto
 
 const BannerComponent = () => {
   return (
     <div className="container-fluid degrade">
-      <div className="row align-items-start mt-4 position-relative">
+      <div className="row align-items-start mt-4 position-relative banner-background">
         <div className="col-md-6 d-flex flex-column justify-content-center">
           <div className="banner-content">
             <h1 className="display-4">
@@ -18,10 +17,6 @@ const BannerComponent = () => {
               <a className="btn btn-custom btn-lg" href="#" role="button">Peça agora</a>
             </div>
           </div>
-        </div>
-        <div className="col-md-6 d-flex justify-content-center align-items-center position-relative">
-          <img src={pizzaBanner} className="img-fluid pizza-banner" alt="Pizza Banner" />
-          <div className="background-coresfundo"></div>
         </div>
       </div>
     </div>

@@ -1,7 +1,9 @@
 import React from "react";
 import BannerComponent from "../banner/BannerComponent";
 import NavbarComponent from "../navbar/NavbarComponent";
-import './Home.css' 
+import SobreComponent from "../sobre/SobreComponent";
+
+import './Home.css'
 
 const Home = () => {
   return(
@@ -11,10 +13,14 @@ const Home = () => {
     </header>
     <div className="container-fluid mt-5">
        <BannerComponent />
+       <div>
+        <br></br>
+        <SobreComponent /> 
+       </div>
     </div>
     </div>
 
-    
+
     )
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './NavbarComponent.css'; // Importe o CSS personalizado
 import logoSaporeDiPizza from './logoSaporeDiPizza.png'; // Importe o logotipo
 
