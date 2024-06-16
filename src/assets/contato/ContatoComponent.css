@@ -1,0 +1,54 @@
+
+.contact-section {
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    padding: 50px 0;
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contato{
+    padding: 20px;
+    
+
+  }
+  .contato h1, .contato h3 {
+    display: inline-block;
+    padding: 10px;
+  
+  }
+
+  .full-width-background{
+       width: 100%;
+       background-color: #C1000F !important;
+      color: white; /* Cor do texto */
+      padding: 20px 0; /* Espaçamento interno superior e inferior */
+      text-align: center; /* Centraliza o texto */
+      border-radius: 19px;
+}
+
+  .contato h3 {
+    margin-left: 200px;
+    text-align: left;
+  }
+
+  .contatolegenda{
+    padding-bottom: 20px;
+  }
+  .contatolegenda h2{
+    color: black !important;
+  }
+
+  .contact-info {
+    background: linear-gradient(90deg, #FF3131 0%, #FF914D 100%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: white;
+    display:inline;
+
+  }
+
+.contact-info img{
+    max-width: 100px;
+}

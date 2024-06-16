@@ -2,8 +2,9 @@ import React from "react";
 import BannerComponent from "../banner/BannerComponent";
 import NavbarComponent from "../navbar/NavbarComponent";
 import SobreComponent from "../sobre/SobreComponent";
-
+import EnderecoComponent from "../endereco/EnderecoComponent";
 import './Home.css'
+import ContatoComponent from "../contato/ContatoComponent";
 
 const Home = () => {
   return(
@@ -17,6 +18,12 @@ const Home = () => {
         <br></br>
         <SobreComponent /> 
        </div>
+       <div>
+        <ContatoComponent/> 
+       </div>
+        <div>
+          <EnderecoComponent/>
+        </div>
     </div>
     </div>
 
