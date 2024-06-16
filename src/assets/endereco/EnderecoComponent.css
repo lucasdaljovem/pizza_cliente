@@ -1,0 +1,32 @@
+.endereco{
+    display:inline-block;
+    align-items: center;
+    padding: 10px;
+}
+
+.mapa{
+    width: 550px;
+    height: 400px;
+}
+
+.enderecoText{
+    text-align: left;
+    padding: 30px;
+}
+
+.enderecoText h1{
+    padding: 20px;
+    
+}
+.enderecoText p{
+    color: white; 
+    padding: 20px;
+}
+
+.imagemPizzaria{
+   margin-top: 50px;
+    padding: 20px;
+    align-items: center;
+    width: 750px;
+    height: 600px;
+}
