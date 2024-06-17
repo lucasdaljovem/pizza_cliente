@@ -1,9 +1,15 @@
 import React from 'react';
-
 import './NavbarComponent.css'; // Importe o CSS personalizado
 import logoSaporeDiPizza from './logoSaporeDiPizza.png'; // Importe o logotipo
 
 const NavbarComponent = () => {
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <nav className="navbar navbar-expand-lg fixed-top navbar-background">
       <div className="container-fluid">
@@ -17,16 +23,22 @@ const NavbarComponent = () => {
           <div className="d-flex w-100 justify-content-between">
             <ul className="navbar-nav me-auto">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Sobre nós</a>
+                <a className="nav-link active" aria-current="page" href="/" onClick={() => scrollToSection('sobre')}>
+                  Sobre nós
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/" onClick={() => scrollToSection('endereco')}>
+                  Endereço
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/" onClick={() => scrollToSection('contato')}>
+                  Contato
+                </a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/Cardapio">Cardápio</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Endereço</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Contato</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="/Carrinho">
