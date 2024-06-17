@@ -1,18 +1,3 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import './index.css';
-// import App from './App';
-// import 'bootstrap/dist/css/bootstrap.css';
-
-// const container = document.getElementById('root'); // Certifique-se de que o id corresponde ao que está no HTML
-// const root = ReactDOM.createRoot(document.getElementById('root'));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>
-// );
-//-----------------------------------ANTIGO indes.js-------------------------------------------------------------------
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
@@ -22,7 +7,7 @@ import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import Home from './assets/paginas/Home';
 import Cardapio from './assets/paginas/Cardapio';
 import ErrorPage from './assets/paginas/ErrorPage';
-import Carrinho from './assets/paginas/Carrinho';
+import Carrinho from './assets/paginas/carrinho/Carrinho';
 //configurando os routers
 const router = createBrowserRouter([
   {

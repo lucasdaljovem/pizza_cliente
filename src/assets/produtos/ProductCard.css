@@ -24,9 +24,12 @@
 }
 
 .description-price-container {
-  padding: 10px;
+  min-height: 110px; /* Defina a altura desejada aqui */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Alinhar itens no container */
+  padding: 10px; /* Adicionar preenchimento interno conforme necessário */
 }
-
 .description {
   margin-bottom: 5px;
 }

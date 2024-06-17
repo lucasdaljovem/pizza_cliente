@@ -1,14 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import './TelaConfirmar.css';
 
-const TelaConfirmar = ({ show, handleClose, product }) => {
+const TelaConfirmar = ({ show, handleClose, product, adicionarAoCarrinho }) => {
   const [size, setSize] = useState('Médio');
   const [quantity, setQuantity] = useState(1);
   const [observations, setObservations] = useState('');
 
   useEffect(() => {
-    if (product && product.category) {
-      setSize('Médio');
+    // Definir o tamanho padrão ao abrir o modal
+    if (product && product.prices) {
+      // Verificar se 'Médio' está disponível nos preços
+      const mediumSize = product.prices.find((priceOption) => priceOption.size === 'Médio');
+      if (mediumSize) {
+        setSize('Médio');
+      } else {
+        // Caso 'Médio' não esteja disponível, definir o primeiro tamanho como padrão
+        setSize(product.prices[0].size);
+      }
     }
   }, [product]);
 
@@ -19,7 +27,12 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
   };
   const handleObservationsChange = (e) => setObservations(e.target.value);
 
-  const isPizza = product && (product.category === 'Pizza Salgada' || product.category === 'Pizza Doce');
+  const handleConcluirPedido = () => {
+    // Encontrar o preço correto baseado no tamanho selecionado
+    const selectedPrice = product.prices.find((priceOption) => priceOption.size === size)?.price || 0;
+    adicionarAoCarrinho(product, size, selectedPrice, observations); // Chama a função adicionarAoCarrinho para adicionar o produto ao carrinho
+    handleClose(); // Fecha a tela de TelaConfirmar
+  };
 
   return (
     <div className={`modal fade ${show ? 'show d-block' : 'd-none'}`} tabIndex="-1" role="dialog">
@@ -32,21 +45,21 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
             </button>
           </div>
           <div className="modal-body">
-            {isPizza && product?.prices && (
+            {product && product.prices && (
               <div className="form-group">
                 <label>Tamanho</label>
-                {['Grande', 'Médio', 'Pequeno'].map((sizeOption) => (
-                  <div key={sizeOption} className="form-check">
+                {product.prices.map((sizeOption) => (
+                  <div key={sizeOption.size} className="form-check">
                     <input
                       className="form-check-input"
                       type="radio"
                       name="size"
-                      value={sizeOption}
-                      checked={size === sizeOption}
+                      value={sizeOption.size}
+                      checked={size === sizeOption.size}
                       onChange={handleSizeChange}
                     />
                     <label className="form-check-label">
-                      {`${sizeOption} R$${product.prices[sizeOption].toFixed(2)}`}
+                      {`${sizeOption.size} R$${sizeOption.price.toFixed(2)}`}
                     </label>
                   </div>
                 ))}
@@ -88,7 +101,7 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
             <button type="button" className="btn btn-secondary button-secondary mr-2" onClick={handleClose}>
               Continuar Comprando
             </button>
-            <button type="button" className="btn btn-primary button-primary ml-2" onClick={() => {/* lógica para concluir pedido */}}>
+            <button type="button" className="btn btn-primary button-primary ml-2" onClick={handleConcluirPedido}>
               Concluir Pedido
             </button>
           </div>
