@@ -15,7 +15,7 @@ const ContatoComponent = () => {
       <div className="contatolegenda"><h2>Siga-nos nas Redes Sociais. Fique por dentro das nossas novidades, promoções e eventos especiais😊</h2>
       </div>
       <div class="row">
-        <div class="col-md-4 contact-info">
+        <div class="col-sm-4 contact-info">
           <h4><i class="bi bi-instagram"></i> Instagram: @saporedi_pizza </h4>
           <h4><i class="bi bi-facebook"></i> Facebook: Sapore di Pizza</h4>
           <h4><i class="bi bi-twitter-x"></i> Twitter: @saporedi_pizza</h4>

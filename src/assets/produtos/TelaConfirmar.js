@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './TelaConfirmar.css';
-import products from './produtos';
 
 const TelaConfirmar = ({ show, handleClose, product }) => {
   const [size, setSize] = useState('Médio');
@@ -20,20 +19,20 @@ const TelaConfirmar = ({ show, handleClose, product }) => {
   };
   const handleObservationsChange = (e) => setObservations(e.target.value);
 
-  const isPizza = product.category === 'Pizza Salgada' || product.category === 'Pizza Doce';
+  const isPizza = product && (product.category === 'Pizza Salgada' || product.category === 'Pizza Doce');
 
   return (
     <div className={`modal fade ${show ? 'show d-block' : 'd-none'}`} tabIndex="-1" role="dialog">
-      <div className="modal-dialog modal-dialog-centered" role="document">
+      <div className="modal-dialog modal-dialog-centered modal-dialog-mobile" role="document">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title">{product.product}</h5>
+            <h5 className="modal-title">{product?.product}</h5>
             <button type="button" className="close-button" onClick={handleClose}>
               <i className="bi bi-x"></i>
             </button>
           </div>
           <div className="modal-body">
-            {isPizza && (
+            {isPizza && product?.prices && (
               <div className="form-group">
                 <label>Tamanho</label>
                 {['Grande', 'Médio', 'Pequeno'].map((sizeOption) => (

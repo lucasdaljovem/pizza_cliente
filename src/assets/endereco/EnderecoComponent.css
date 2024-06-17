@@ -30,3 +30,49 @@
     width: 750px;
     height: 600px;
 }
+
+
+@media (max-width: 1350px) {
+    .endereco {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa,
+    .imagemPizzaria {
+        width: 90%;
+        margin-top: 20px;
+    }
+
+    .enderecoText h1,
+    .enderecoText p {
+        padding: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Estilos para telas menores */
+@media (min-width: 575px) and (max-width: 768px) {
+    .endereco {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mapa,
+    .imagemPizzaria {
+        width: 50%;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    .enderecoText h1,
+    .enderecoText p {
+        padding: 10px;
+    }
+}

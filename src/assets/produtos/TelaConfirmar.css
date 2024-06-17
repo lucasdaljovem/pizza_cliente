@@ -1,14 +1,12 @@
-/* Estilos para o container pai do modal */
+/* TelaConfirmar.css */
 .modal-content {
     background-color: #4C6B33;
     border: none;
     box-shadow: none;
-    border-radius: 10px; /* Adiciona um arredondamento aos cantos */
+    border-radius: 16px;
 }
 
-/* Estilos para o cabeçalho */
 .modal-header {
-    background-color: #4C6B33;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,18 +26,16 @@
     font-size: 1.8rem;
 }
 
-/* Estilos para o corpo do modal */
 .modal-body {
     background-color: #4C6B33;
     color: white;
-    padding: 20px;
+    padding: 0px 20px 20px 20px; /* Reduzindo o padding superior para 10px */
 }
 
 .form-check-label {
     color: white;
 }
 
-/* Estilos para inputs e formulários */
 .form-control-observations {
     border-radius: 20px;
     background-color: white;
@@ -51,12 +47,13 @@
 .form-control-quantity {
     border-radius: 20px;
     width: 60px;
+    background-color: transparent; /* Tornando o fundo transparente */
+    border:none; /* Mantendo a borda visível */
+    color: white; /* Garantindo que o texto dentro do input seja visível */
 }
 
-/* Estilos para o rodapé do modal */
+
 .modal-footer {
-    background-color: #4C6B33;
-    display: flex;
     justify-content: space-between;
     border-top: none;
     padding: 15px;
@@ -64,21 +61,12 @@
 
 .button-secondary,
 .button-primary {
-    border-radius: 20px;
-    width: 45%;
-    font-size: 1rem;
-}
-
-.button-secondary {
     background: linear-gradient(to right, #FF3131, #FF914D);
     border: none;
     margin-right: 10px;
-}
-
-.button-primary {
-    background: linear-gradient(to right, #FF3131, #FF914D);
-    border: none;
-    margin-left: 10px;
+    border-radius: 20px;
+    width: 45%;
+    font-size: 1rem;
 }
 
 .button-secondary:focus,
@@ -86,16 +74,12 @@
     box-shadow: none;
 }
 
-/* Estilos para o ícone de lápis */
 .input-group-prepend .input-group-text {
     background-color: transparent;
     border: none;
-    font-size: 1.5rem;
-}
-
-.input-group-prepend .bi-pencil-square {
     color: white;
     font-size: 2rem;
+    padding: 10px;
 }
 
 .input-group-observations {
@@ -103,17 +87,17 @@
     align-items: center;
 }
 
-/* Estilos de hover */
 .button-secondary:hover,
 .button-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos de responsividade */
 @media (max-width: 576px) {
-    .modal-dialog {
+    .modal-dialog.modal-dialog-mobile {
         margin: 10px;
+        width: 100%; /* Aumenta a largura do modal */
+        max-width: none; /* Permite que o modal ocupe toda a largura disponível */
     }
 
     .modal-content {

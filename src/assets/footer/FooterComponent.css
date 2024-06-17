@@ -1,6 +1,5 @@
-.footer {
+.footer,.bg-body-tertiary {
     position: fixed;
     bottom: 0;
     width: 100%;
   }
-  
