@@ -1,7 +1,7 @@
 import React from 'react';
 import NavbarComponent from './assets/navbar/NavbarComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import products from './assets/produtos/produtos'; // Importe os produtos do novo arquivo
+import products from './assets/produtos/Products'; // Importe os produtos do novo arquivo
 import { Outlet } from 'react-router-dom';
 import './App.css';
 
