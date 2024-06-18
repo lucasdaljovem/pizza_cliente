@@ -15,6 +15,9 @@ function App() {
        {/* Para reaproveitar elementos */}
       <Outlet/>
       </div>
+      {/* <footer>
+      <FooterComponent/>
+    </footer> */}
     </div>
   );
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './ProductCard.css';
 import TelaConfirmar from './TelaConfirmar';
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, adicionarAoCarrinho }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => setShowModal(true);
@@ -37,7 +37,7 @@ const ProductCard = ({ product }) => {
           </div>
         </div>
       </div>
-      <TelaConfirmar show={showModal} handleClose={handleCloseModal} product={product} />
+      <TelaConfirmar show={showModal} handleClose={handleCloseModal} product={product} adicionarAoCarrinho={adicionarAoCarrinho} />
     </div>
   );
 };

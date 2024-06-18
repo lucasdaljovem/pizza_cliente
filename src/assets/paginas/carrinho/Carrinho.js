@@ -1,54 +1,30 @@
-import React, { useState } from 'react';
-import './Carrinho.css';
-import { calcularTotal } from './utils'; // Supondo que a função calcularTotal está implementada em ./utils
-import ItemCarrinho from './ItemCarrinho'; // Componente para renderizar cada item do carrinho
-import TelaConfirmar from '../../produtos/TelaConfirmar';
-import adornoSabor from "../../produtos/imgs/adornoSabor.png";
+// Carrinho.js
 
+import React from 'react';
+import ItemCarrinho from './ItemCarrinho';
+import { calcularTotal } from './utils';
 
-const Carrinho = ({ produtos }) => {
-  const [itensCarrinho, setItensCarrinho] = useState([]);
-  const [observations, setObservations] = useState('');
-
-  const adicionarAoCarrinho = (produto, tamanho, preco, observacoes) => {
-    const newItem = {
-      product: produto,
-      size: tamanho,
-      price: preco,
-      observations: observacoes,
-    };
-    setItensCarrinho([...itensCarrinho, newItem]);
-    setObservations(''); // Limpa as observações após adicionar ao carrinho
-  };
-
-  // Verifica se produtos não é undefined e se possui pelo menos um elemento
-  const produtoSelecionado = produtos && produtos.length > 0 ? produtos[0] : null;
+const Carrinho = ({ itensCarrinho }) => {
+  // Verifica se itensCarrinho é uma array antes de acessar map
+  const total = Array.isArray(itensCarrinho) ? calcularTotal(itensCarrinho) : 0;
 
   return (
-    <div className="carrinho">
-      <header className="carrinho-header">
-        <h2 className="carrinho-title" style={{ color: '#F0B872' }}>Carrinho</h2>
-        <img src={adornoSabor} alt="Adorno Sabor" className="category-decoration" />
-        <div className="total-container">
-          <span style={{ color: 'white' }}>Total:</span>
-          <span className="total-price">R$ {calcularTotal(itensCarrinho).toFixed(2)}</span>
+    <div className="container mt-5">
+      <h2>Itens no Carrinho</h2>
+      {/* Verifica se itensCarrinho é uma array e se tem itens dentro */}
+      {Array.isArray(itensCarrinho) && itensCarrinho.length === 0 ? (
+        <p>Carrinho vazio</p>
+      ) : (
+        <div>
+          {/* Mapeia os itens do carrinho apenas se itensCarrinho for uma array */}
+          {itensCarrinho.map((item, index) => (
+            <ItemCarrinho key={index} item={item} />
+          ))}
+          <h4>Total: R${total.toFixed(2)}</h4>
+          <button className="btn btn-primary mr-2">Continuar Comprando</button>
+          <a href="/Carrinho" className="btn btn-success">Concluir Pedido</a>
         </div>
-        <button className="finalizar-button">Finalizar</button>
-      </header>
-      <div className="carrinho-items">
-        {itensCarrinho.map((item, index) => (
-          <ItemCarrinho key={index} item={item} />
-        ))}
-      </div>
-      <div className="adicionar-observacoes">
-        <input
-          type="text"
-          value={observations}
-          onChange={(e) => setObservations(e.target.value)}
-          placeholder="Adicionar observações"
-        />
-        {/* Passa a função adicionarAoCarrinho para TelaConfirmar */}
-      </div>
+      )}
     </div>
   );
 };

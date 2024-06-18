@@ -30,7 +30,14 @@ const TelaConfirmar = ({ show, handleClose, product, adicionarAoCarrinho }) => {
   const handleConcluirPedido = () => {
     // Encontrar o preço correto baseado no tamanho selecionado
     const selectedPrice = product.prices.find((priceOption) => priceOption.size === size)?.price || 0;
-    adicionarAoCarrinho(product, size, selectedPrice, observations); // Chama a função adicionarAoCarrinho para adicionar o produto ao carrinho
+    adicionarAoCarrinho(product, size, selectedPrice * quantity, observations); // Chama a função adicionarAoCarrinho para adicionar o produto ao carrinho
+    handleClose(); // Fecha a tela de TelaConfirmar
+  };
+
+  const handleContinuarComprando = () => {
+    // Encontrar o preço correto baseado no tamanho selecionado
+    const selectedPrice = product.prices.find((priceOption) => priceOption.size === size)?.price || 0;
+    adicionarAoCarrinho(product, size, selectedPrice * quantity, observations); // Chama a função adicionarAoCarrinho para adicionar o produto ao carrinho
     handleClose(); // Fecha a tela de TelaConfirmar
   };
 
@@ -98,7 +105,7 @@ const TelaConfirmar = ({ show, handleClose, product, adicionarAoCarrinho }) => {
             </div>
           </div>
           <div className="modal-footer">
-            <button type="button" className="btn btn-secondary button-secondary mr-2" onClick={handleClose}>
+            <button type="button" className="btn btn-secondary button-secondary mr-2" onClick={handleContinuarComprando}>
               Continuar Comprando
             </button>
             <button type="button" className="btn btn-primary button-primary ml-2" onClick={handleConcluirPedido}>
